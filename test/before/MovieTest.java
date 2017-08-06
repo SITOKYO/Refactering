@@ -1,5 +1,6 @@
-package before.app;
+package before;
 
+import before.Movie;
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -8,9 +9,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class RentalTest {
+public class MovieTest {
     
-    public RentalTest() {
+    public MovieTest() {
     }
     
     @BeforeClass
@@ -30,18 +31,22 @@ public class RentalTest {
     }
 
     @Test
-    public void testGetMovie() {
+    public void testGetTitle() {
         Movie movie = new Movie("TwentyFour", 100);
-        Rental rental = new Rental(movie, 7);
-        assertThat(rental.getMovie().getTitle(), is("TwentyFour"));
-        assertThat(rental.getMovie().getPriceCode(), is(100));
+        assertThat(movie.getTitle(), is("TwentyFour"));
     }
 
     @Test
-    public void testGetDaysRented() {
+    public void testGetPriceCode() {
         Movie movie = new Movie("TwentyFour", 100);
-        Rental rental = new Rental(movie, 7);
-        assertThat(rental.getDaysRented(), is(7));
+        assertThat(movie.getPriceCode(), is(100));
+    }
+
+    @Test
+    public void testSetPriceCode() {
+        Movie movie = new Movie("TwentyFour", 100);
+        movie.setPriceCode(200);
+        assertThat(movie.getPriceCode(), is(200));
     }
     
 }

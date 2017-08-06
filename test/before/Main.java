@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package before.app;
+package before;
+
+import before.Customer;
+import before.Movie;
+import before.Rental;
 
 /**
  *

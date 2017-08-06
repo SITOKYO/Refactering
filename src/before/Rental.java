@@ -1,4 +1,4 @@
-package before.app;
+package before;
 
 public class Rental {
 

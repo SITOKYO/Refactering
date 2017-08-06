@@ -1,4 +1,4 @@
-package before.app;
+package before;
 
 public class Movie {
     public static final int CHILDRENS = 2;

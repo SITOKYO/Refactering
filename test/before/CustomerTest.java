@@ -1,5 +1,8 @@
-package before.app;
+package before;
 
+import before.Customer;
+import before.Movie;
+import before.Rental;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
