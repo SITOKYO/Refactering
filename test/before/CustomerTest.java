@@ -51,10 +51,10 @@ public class CustomerTest {
 
         assertThat(customer.statement(), is(
             "Rental Record for 日本　太郎\n" +
-            "  TwentyFour  9.5\n" +
-            "  徳川家康  9.0\n" +
-            "  アンパンマン  4.5\n" +
-            "Amount owed is 23.0\n" +
+            "  TwentyFour  175\n" +
+            "  徳川家康  210\n" +
+            "  アンパンマン  180\n" +
+            "Amount owed is 565\n" +
             "You earnd 4 frequent rental points"
         ));
     }
@@ -68,8 +68,8 @@ public class CustomerTest {
 
         assertThat(customer.statement(), is(
             "Rental Record for 日本　太郎\n" +
-            "  新作レンタル  3.0\n" +
-            "Amount owed is 3.0\n" +
+            "  新作レンタル  70\n" +
+            "Amount owed is 70\n" +
             "You earnd 1 frequent rental points"
         ));
     }
