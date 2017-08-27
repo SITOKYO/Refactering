@@ -21,28 +21,28 @@ public class Customer {
     }
     
     public String statement(){
-        double totalAmount = 0;
+        int totalAmount = 0;
         int frequentRentalPoints = 0;
         Iterator iterator = rentals.iterator();
         String result = "Rental Record for " + getName() + "\n";
         while(iterator.hasNext()){
-            double thisAmount = 0;
+            int thisAmount = 0;
             Rental each = (Rental)iterator.next();
             
             // 一行ごとに金額を計算
             switch (each.getMovie().getPriceCode()){
                 case Movie.REGULER:
-                    thisAmount += 2;
+                    thisAmount += 100;
                     if (each.getDaysRented() > 2)
-                        thisAmount += (each.getDaysRented() - 2) * 1.5;
+                        thisAmount += (each.getDaysRented() - 2) * 15;
                     break;
                 case Movie.NEW_RELRASE:
-                    thisAmount += each.getDaysRented() * 3;
+                    thisAmount += each.getDaysRented() * 70;
                     break;
                 case Movie.CHILDRENS:
-                    thisAmount += 1.5;
+                    thisAmount += 150;
                     if (each.getDaysRented() > 3)
-                        thisAmount += (each.getDaysRented() - 3) * 1.5;
+                        thisAmount += (each.getDaysRented() - 3) * 15;
                     break;
             }
             
